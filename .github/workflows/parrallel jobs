@@ -1,0 +1,11 @@
+name: Parallel jobs
+on: push
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sloop 10 && echo "First"
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep10 && echo "Second"
